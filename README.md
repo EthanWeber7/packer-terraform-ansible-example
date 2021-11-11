@@ -10,8 +10,6 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lamb
 
 ## Alter the packer file
 
-- Remove the source source_ami_filter block
-- (video) Add a source_ami like in the video we watched.
 - (video) Log into your AWS account and choose a source AMI to add to this field
 - Add a Variable called playbook_file with a default value of "playbook.yml"
 - Add an Ansible Provisioner by checking the Packer Documentation.  
