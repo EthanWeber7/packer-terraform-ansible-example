@@ -1,0 +1,19 @@
+---
+# playbook.yml
+- name: 'Provision Image'
+  hosts: default
+  become: true
+
+  tasks:
+    - name: Update the repository cache and update package "nginx" to latest version using default release squeeze-backport
+      apt:
+        name: nginx
+        state: latest
+        default_release: squeeze-backports
+        update_cache: yes
+
+    - name: Install latest version of "openjdk-6-jdk" ignoring "install-recommends"
+      apt:
+        name: openjdk-6-jdk
+        state: latest
+        install_recommends: no
